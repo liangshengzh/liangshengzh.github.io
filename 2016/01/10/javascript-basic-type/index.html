@@ -34,7 +34,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -43,16 +43,22 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description">
+<meta name="description" content="Javascript中有5种基本数据类型Undefined, Null, Boolean, Number, String和一种复杂数据类型Object.
+由于Javascript是弱类型语言，所以提供了typeof操作符来检测语言类型。typeof 针对这几种数据类型返回表示不同类型的字符串。
+UndefinedUndefined类型只有一个值undefined。 对于未定义的变量和使用var声明">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript基本数据类型">
+<meta property="og:title" content="Javascript之数据类型">
 <meta property="og:url" content="http://liangshengzh.github.io/2016/01/10/javascript-basic-type/index.html">
 <meta property="og:site_name" content="LiangSheng">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-01-10T15:14:26.000Z">
+<meta property="og:description" content="Javascript中有5种基本数据类型Undefined, Null, Boolean, Number, String和一种复杂数据类型Object.
+由于Javascript是弱类型语言，所以提供了typeof操作符来检测语言类型。typeof 针对这几种数据类型返回表示不同类型的字符串。
+UndefinedUndefined类型只有一个值undefined。 对于未定义的变量和使用var声明">
+<meta property="og:updated_time" content="2016-01-12T13:29:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript基本数据类型">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Javascript之数据类型">
+<meta name="twitter:description" content="Javascript中有5种基本数据类型Undefined, Null, Boolean, Number, String和一种复杂数据类型Object.
+由于Javascript是弱类型语言，所以提供了typeof操作符来检测语言类型。typeof 针对这几种数据类型返回表示不同类型的字符串。
+UndefinedUndefined类型只有一个值undefined。 对于未定义的变量和使用var声明">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -64,7 +70,7 @@
 
 
 
-  <title> Javascript基本数据类型 | LiangSheng </title>
+  <title> Javascript之数据类型 | LiangSheng </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -209,7 +215,7 @@
             
             
               
-                Javascript基本数据类型
+                Javascript之数据类型
               
             
           </h1>
@@ -249,11 +255,57 @@
       
 
       
-        <span itemprop="articleBody"></span>
+        <span itemprop="articleBody"><p>Javascript中有5种基本数据类型Undefined, Null, Boolean, Number, String和一种复杂数据类型Object.</p>
+<p>由于Javascript是弱类型语言，所以提供了typeof操作符来检测语言类型。typeof 针对这几种数据类型返回表示不同类型的字符串。</p>
+<h3 id="Undefined">Undefined</h3><p>Undefined类型只有一个值undefined。 对于未定义的变量和使用var声明但为进行初始化的变量执行typeof都会返回字符串undefined。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message;</span><br><span class="line"><span class="keyword">typeof</span> messsage; <span class="comment">//"undefined"</span></span><br><span class="line"><span class="keyword">typeof</span>(infomation); <span class="comment">//"undefined"</span></span><br><span class="line"><span class="comment">//typeof为操作符，所以在使用typeof的时候可以使用括号，也可以不用</span></span><br></pre></td></tr></table></figure>
+<h3 id="Null">Null</h3><p>Null类型同样只有一个值null。由于null表示空对象指针，所以对null执行typeof操作会返回object字符串。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">typeof null; //&#34;object&#34;</span><br></pre></td></tr></table></figure>
+<p>需要注意的是null和undefined的相等性测试会返回true。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>; <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<h3 id="Boolean">Boolean</h3><p>Boolean类型有两个值，true和false。其他所有类型的值都可以转化成与这两个值等价的值。</p>
+<table>
+<thead>
+<tr>
+<th>Boolean</th>
+<th style="text-align:center">true</th>
+<th style="text-align:center">false</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td style="text-align:center">任何非空字符串</td>
+<td style="text-align:center">“”或者’’</td>
+</tr>
+<tr>
+<td>Number</td>
+<td style="text-align:center">任何非零数字</td>
+<td style="text-align:center">0或者NaN</td>
+</tr>
+<tr>
+<td>Object</td>
+<td style="text-align:center">任何非空对象</td>
+<td style="text-align:center">null</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">undefined</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Number">Number</h3><h3 id="String">String</h3><h3 id="Object">Object</h3></span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Javascript/" rel="tag">#Javascript</a>
+          
+        </div>
       
 
       
@@ -296,7 +348,7 @@
           <div class="comments" id="comments">
             
               <div class="ds-thread" data-thread-key="2016/01/10/javascript-basic-type/"
-                   data-title="Javascript基本数据类型" data-url="http://liangshengzh.github.io/2016/01/10/javascript-basic-type/">
+                   data-title="Javascript之数据类型" data-url="http://liangshengzh.github.io/2016/01/10/javascript-basic-type/">
               </div>
             
           </div>
@@ -353,7 +405,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -381,7 +433,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Undefined"><span class="nav-number">1.</span> <span class="nav-text">Undefined</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Null"><span class="nav-number">2.</span> <span class="nav-text">Null</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Boolean"><span class="nav-number">3.</span> <span class="nav-text">Boolean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Number"><span class="nav-number">4.</span> <span class="nav-text">Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String"><span class="nav-number">5.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object"><span class="nav-number">6.</span> <span class="nav-text">Object</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
